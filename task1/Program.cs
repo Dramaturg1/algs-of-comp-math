@@ -28,6 +28,11 @@ namespace task2
 
         static float CalculateExp(float x)
         {
+            if (x < 0)
+            {
+                return 1.0f / CalculateExp(-x);
+            }
+
             float sum = 1.0f;
             float term = 1.0f;
             int i = 1;
